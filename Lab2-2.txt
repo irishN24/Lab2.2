@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+#define PI 3.14159265358979323846
+
+int main() 
+{
+	double Y, x;
+	
+	for (double x = PI; x <= 2*PI; x += PI/4)
+	{
+		Y = cos(x);	
+		printf("%f\n", Y);
+	}
+	
+	return 0;
+}
