@@ -1,16 +1,23 @@
 #include <stdio.h>
 #include <math.h>
-#define PI 3.14159265358979323846
-
-int main() 
+#define PI 3.14159265358979323846 
+int main()
 {
-	double Y, x;
-	
-	for (double x = PI; x <= 2*PI; x += PI/4)
+	double Y, a, b, h;
+	printf("Input a, b, h:\n");
+	double rez = scanf("%lf%lf%lf", &a, &b, &h);
+	if (rez == 3.000000000000000000) 
 	{
-		Y = cos(x);	
-		printf("%f\n", Y);
+		for (double x = a * PI; x <= b * PI;x += h * PI )
+		{
+			Y = cos(x);
+			printf("x: %lf,Y: %lf\n",x, Y);
+			
+		}
 	}
-	
+	else
+	{
+		printf("Wrong Data");
+	}
 	return 0;
 }
