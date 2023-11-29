@@ -5,7 +5,7 @@ int main()
 {
 	double Y, a, b, h;
 	printf("Input a, b, h:\n");
-	int rez = scanf_s("%lf%lf%lf", &a, &b, &h);
+	int rez = scanf("%lf%lf%lf", &a, &b, &h);
 	if (rez == 3 && a < b && h > 0) 
 	{
 		for (double x = a; x <= b ;x += h)
