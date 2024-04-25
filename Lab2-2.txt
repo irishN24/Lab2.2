@@ -1,24 +1,27 @@
+//Протабулировать функцию y = cos x  в интервале от а до b с шагом h
 #include <stdio.h>
 #include <math.h>
-#define PI 3.14159265358979323846 
+#define PI 3.14159265358979323846
 int main()
 {
-	double Y, a, b, h;
-	printf("Input a, b, h:\n");
-	int rez = scanf("%lf%lf%lf", &a, &b, &h);
-	if (rez == 3 && a < b && h > 0) 
-	{
-		for (double x = a; x <= b ;x += h)
-		{
-			double r = x * PI;
-			Y = cos(x);
-			printf ("x: %lf,Y: %lf\n",x, Y);
-			
-		}
-	}
-	else
-	{
-		printf("Wrong Data");
-	}
-	return 0;
+    double Y, a, b, h, y;
+    printf("Input a, b, h:\n");
+    int rez = scanf("%lf%lf%lf", &a, &b, &h);
+    double y = 0;
+    
+    if (rez == 3 && a < b && h > 0)
+    {
+        for (double x = a; x <= b ;x += h)
+        {
+            double r = x * PI;
+            Y = cos(x);
+            printf ("x: %lf,Y: %lf\n",x, Y);
+
+        }
+    }
+    else
+    {
+        printf("Wrong Data");
+    }
+    return 0;
 }
