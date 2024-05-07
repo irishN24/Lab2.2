@@ -1,4 +1,3 @@
-//Протабулировать функцию y = cos x  в интервале от а до b с шагом h
 #include <stdio.h>
 #include <math.h>
 int main()
