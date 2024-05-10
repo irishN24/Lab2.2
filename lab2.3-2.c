@@ -4,7 +4,7 @@ int main()
 {
     double Y, a, b, h, x;
     printf("Input a, b, h:\n");
-    int rez = scanf_s("%lf%lf%lf", &a, &b, &h);
+    int rez = scanf("%lf%lf%lf", &a, &b, &h);
 
     if (rez == 3)
     {
@@ -13,25 +13,25 @@ int main()
             printf("x: %lf,Y: %lf\n", a, Y);
         }
         if (a < b) {
-            if (h >= a && h <= b) {
+            if (h <= b - a) {
                 for (x = a; ((x >= a) && (x < b)); x += h) {
                     Y = cos(x);
                     printf("x: %lf,Y: %lf\n", x, Y);
                 }
             }
-            if ((h < a) || (h > b)) {
+            else{
                 Y = cos(a);
                 printf("x: %lf,Y: %lf\n", a, Y);
             }
         }
         if (a > b) {
-            if (h <= a && h >= b) {
+            if (h <= a - b) {
                 for (x = a; ((x <= a) && (x > b)); x += h) {
                     Y = cos(x);
                     printf("x: %lf,Y: %lf\n", x, Y);
                 }
             }
-            if ((h > a) || (h < b)) {
+            else {
                 Y = cos(a);
                 printf("x: %lf,Y: %lf\n", a, Y);
             }
