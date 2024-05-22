@@ -14,7 +14,7 @@ int main()
         }
         if (a < b) {
             if (h <= b - a) {
-                for (x = a; ((x >= a) && (x < b)); x += h) {
+                for (x = a; ((x >= a) && (x <= b)); x += h) {
                     Y = cos(x);
                     printf("x: %lf,Y: %lf\n", x, Y);
                 }
@@ -26,7 +26,7 @@ int main()
         }
         if (a > b) {
             if (h <= a - b) {
-                for (x = a; ((x <= a) && (x > b)); x += h) {
+                for (x = a; ((x <= a) && (x >= b)); x += h) {
                     Y = cos(x);
                     printf("x: %lf,Y: %lf\n", x, Y);
                 }
