@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 int main()
 {
     double Y, a, b, h, x;
@@ -13,7 +14,7 @@ int main()
             printf("x: %lf,Y: %lf\n", a, Y);
         }
         if (a < b) {
-            if (h <= b - a) {
+            if ((h <= b - a) && (h != 0)) {
                 for (x = a; ((x >= a) && (x <= b)); x += h) {
                     Y = cos(x);
                     printf("x: %lf,Y: %lf\n", x, Y);
@@ -25,7 +26,7 @@ int main()
             }
         }
         if (a > b) {
-            if (h <= a - b) {
+            if ((h <= a - b) && (h != 0)) {
                 for (x = a; ((x <= a) && (x >= b)); x += h) {
                     Y = cos(x);
                     printf("x: %lf,Y: %lf\n", x, Y);
